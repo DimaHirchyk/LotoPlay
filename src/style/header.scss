@@ -1,42 +1,19 @@
 @use "../style/helper/breakpoints" as vars;
 
-.header {
-  position: absolute;
-  top: 32px;
-  left: 0;
-  width: 100%;
-  background-color: transparent;
-
-  padding: 0 32px;
-
-  @media screen and (min-width: vars.$breakpoint-tablet) {
-    padding: 0 20px;
-  }
-
-  @media screen and (min-width: vars.$breakpoint-desktop) {
-    top: 40px;
-  }
-}
-
 .header-container {
-  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-block: 30px;
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
-
-  @media screen and (min-width: vars.$breakpoint-tablet) {
-    width: 60px;
-    height: 60px;
-  }
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .icons-for-modal {
-  @media screen and (min-width: vars.$breakpoint-desktop) {
+  @media screen and (min-width: vars.$breakpoint-tablet) {
     display: none;
   }
 }
@@ -62,9 +39,6 @@
   display: none;
 
   @media screen and (min-width: vars.$breakpoint-tablet) {
-  }
-
-  @media screen and (min-width: vars.$breakpoint-desktop) {
     display: flex;
   }
 }
@@ -72,22 +46,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 80px;
+  gap: 15px;
 }
 
 .header-link {
   position: relative;
   color: var(--white-color);
-  font-weight: 500;
-  font-size: 24px;
+  font-weight: 600;
+  font-size: 20px;
   white-space: nowrap;
+
   &:after {
     position: absolute;
     content: "";
     height: 2px;
     width: 0;
     background-color: var(--white-color);
-    bottom: -4px;
+    bottom: -10px;
     left: 0;
     transition: width 0.3s ease;
   }

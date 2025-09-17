@@ -1,5 +1,2 @@
-import "./js/AOS";
-// import "./js/modal";
-import "./js/rewiev";
+import "./js/modal";
 import "./js/swiper";
-import "./js/fillingToursModal";

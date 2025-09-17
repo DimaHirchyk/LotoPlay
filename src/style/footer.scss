@@ -1,0 +1,61 @@
+@use "../style/helper/breakpoints" as vars;
+
+.footer {
+  padding-block: 70px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    padding-block: 75px;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    padding-block: 100px;
+  }
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  color: var(--second-text);
+  font-weight: 600;
+  font-size: 14px;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    font-size: 16px;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    font-size: 18px;
+  }
+}
+.rights-protected {
+  text-align: center;
+}
+.fotter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media screen and (min-width: vars.$breakpoint-desktop) {
+    flex-direction: row;
+    gap: 25px;
+  }
+}
+
+.footer-address-list {
+  margin-top: 20px;
+  display: flex;
+  font-style: normal;
+  font-weight: 500;
+  justify-content: space-between;
+
+  @media screen and (min-width: vars.$breakpoint-tablet) {
+    justify-content: start;
+    margin-top: 30px;
+    gap: 15px;
+  }
+}
