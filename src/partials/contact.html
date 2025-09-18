@@ -10,11 +10,29 @@
           <div class="row-input">
             <div class="block-input">
               <label for="" class="label-contatc">Ім&apos;я</label
-              ><input type="text" class="input-contact" />
+              ><input
+                type="text"
+                class="input-contact"
+                placeholder=" "
+                minlength="3"
+                maxlength="20"
+                required />
+              <p class="text-valid">Succes!</p>
+              <p class="text-invalid">
+                Поле повинно мати мін. 3, макс. 6 символів
+              </p>
             </div>
             <div class="block-input">
               <label for="" class="label-contatc">Email</label
-              ><input type="email" class="input-contact" />
+              ><input
+                type="email"
+                class="input-contact"
+                pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+                maxlength="30"
+                placeholder=" "
+                required />
+              <p class="text-valid">Succes!</p>
+              <p class="text-invalid">Не коректна пошта</p>
             </div>
           </div>
 
@@ -22,12 +40,19 @@
             <label for="" class="label-contatc">Повідомлення</label
             ><textarea
               class="input-contact textarea"
-              placeholder="Розкажи про свої ідеї..."></textarea>
+              placeholder="Розкажи про свої ідеї..."
+              minlength="3"
+              maxlength="100"></textarea>
+            <p class="text-valid">Succes!</p>
+            <p class="text-invalid">
+              Поле повинно мати мін. 3, макс. 100 символів
+            </p>
           </div>
         </div>
 
         <button class="contact-btn" type="submit">Відправити</button>
       </form>
+
       <div class="contact-map-block">
         <h4 class="contact-place">Наше місцезнаходження</h4>
         <div class="map-block">

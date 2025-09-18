@@ -101,7 +101,43 @@
   height: 40px;
   color: var(--second-text);
   padding-left: 15px;
+
+  &:focus {
+    border-color: var(--grey-color);
+  }
+
+  &:not(:placeholder-shown):user-invalid {
+    border-color: var(--color-buy-ticket-hover);
+  }
+
+  &:not(:placeholder-shown):user-valid {
+    border-color: green;
+  }
 }
+
+.input-contact:not(:placeholder-shown):user-valid ~ .text-valid {
+  display: block;
+}
+
+.input-contact:not(:placeholder-shown):user-invalid ~ .text-invalid {
+  display: block;
+}
+
+.text-valid,
+.text-invalid {
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+.text-valid {
+  color: green;
+}
+
+.text-invalid {
+  color: red;
+}
+
 .textarea {
   resize: none;
   height: 80px;
@@ -143,8 +179,8 @@
 }
 
 .contact-btn {
-  margin-top: 20px;
   background: var(--color-buy-ticket);
+  margin-top: 20px;
   color: var(--white-color);
   border: none;
   padding: 10px 12px;
